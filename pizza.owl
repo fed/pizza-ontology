@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://ontologies.fknussel.com/pizza#"
+     xml:base="https://ontologies.fknussel.com/pizza"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://ontologies.fknussel.com/pizza">
+        <rdfs:comment>The pizza ontology that describes various pizzas based on their toppings.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#hasBase -->
+
+    <owl:ObjectProperty rdf:about="https://ontologies.fknussel.com/pizza#hasBase">
+        <rdfs:subPropertyOf rdf:resource="https://ontologies.fknussel.com/pizza#hasIngredient"/>
+        <owl:inverseOf rdf:resource="https://ontologies.fknussel.com/pizza#isBaseOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="https://ontologies.fknussel.com/pizza#hasIngredient">
+        <owl:inverseOf rdf:resource="https://ontologies.fknussel.com/pizza#isIngredientOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="https://ontologies.fknussel.com/pizza#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="https://ontologies.fknussel.com/pizza#hasIngredient"/>
+        <owl:inverseOf rdf:resource="https://ontologies.fknussel.com/pizza#isToppingOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#isBaseOf -->
+
+    <owl:ObjectProperty rdf:about="https://ontologies.fknussel.com/pizza#isBaseOf">
+        <rdfs:subPropertyOf rdf:resource="https://ontologies.fknussel.com/pizza#isIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#isIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="https://ontologies.fknussel.com/pizza#isIngredientOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#isToppingOf -->
+
+    <owl:ObjectProperty rdf:about="https://ontologies.fknussel.com/pizza#isToppingOf">
+        <rdfs:subPropertyOf rdf:resource="https://ontologies.fknussel.com/pizza#isIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#AnchovyTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#AnchovyTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#CaperTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#CaperTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#CheeseTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#DeepPanBase -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#DeepPanBase">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#PizzaBase"/>
+        <owl:disjointWith rdf:resource="https://ontologies.fknussel.com/pizza#ThinAndCrispyBase"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#GreenPepperTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#GreenPepperTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#HamTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#HamTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#JalapenoPepperTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#JalapenoPepperTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#MeatTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#MeatTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#MozzarellaTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#MozzarellaTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#CheeseTopping"/>
+        <owl:disjointWith rdf:resource="https://ontologies.fknussel.com/pizza#ParmesanTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#MushroomTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#MushroomTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#OliveTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#OliveTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#OnionTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#OnionTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#ParmesanTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#ParmesanTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#CheeseTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#PepperTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#PepperTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#PepperoniTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#PepperoniTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#Pizza -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#Pizza"/>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#PizzaBase -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#PizzaBase"/>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#PizzaTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#PizzaTopping"/>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#PrawnTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#PrawnTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#RedPepperTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#RedPepperTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#SalamiTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#SalamiTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#SeafoodTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#SeafoodTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#SpicyBeefTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#SpicyBeefTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#ThinAndCrispyBase -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#ThinAndCrispyBase">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#TomatoTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#TomatoTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#TunaTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#TunaTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ontologies.fknussel.com/pizza#VegetableTopping -->
+
+    <owl:Class rdf:about="https://ontologies.fknussel.com/pizza#VegetableTopping">
+        <rdfs:subClassOf rdf:resource="https://ontologies.fknussel.com/pizza#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#AnchovyTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#PrawnTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#TunaTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#CaperTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#MushroomTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#OliveTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#OnionTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#PepperTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#TomatoTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#CheeseTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#MeatTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#SeafoodTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#VegetableTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#GreenPepperTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#JalapenoPepperTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#RedPepperTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#HamTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#PepperoniTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#SalamiTopping"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#SpicyBeefTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#Pizza"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#PizzaBase"/>
+            <rdf:Description rdf:about="https://ontologies.fknussel.com/pizza#PizzaTopping"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
